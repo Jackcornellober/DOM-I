@@ -47,8 +47,6 @@ let newA1 = document.createElement('a');
 newA1.textContent = 'Cat Pictures';
 navMenu.appendChild(newA1);
 
-
-
 let navItems = document.querySelectorAll('nav > a')
 navItems[0].textContent = 'Services';
 navItems[1].textContent = 'Product';
@@ -72,17 +70,17 @@ middleImage.src = "img/mid-page-accent.jpg"
 
 let ctaHeader = document.querySelector('.cta-text > h1')
 
-let boi1 = document.createTextNode('dom')
-let boi2 = document.createTextNode('is')
-let boi3 = document.createTextNode('awesome')
+let text1 = document.createTextNode('dom')
+let text2 = document.createTextNode('is')
+let text3 = document.createTextNode('awesome')
 var br1 = document.createElement("br");
 var br2 = document.createElement("br");
 var br3 = document.createElement("br");
-ctaHeader.appendChild(boi1)
+ctaHeader.appendChild(text1)
 ctaHeader.appendChild(br1)
-ctaHeader.appendChild(boi2)
+ctaHeader.appendChild(text2)
 ctaHeader.appendChild(br2)
-ctaHeader.appendChild(boi3)
+ctaHeader.appendChild(text3)
 
 document.querySelector('button').textContent = 'Get Started'
 
@@ -103,3 +101,7 @@ paragraphs[4].textContent = 'Vision content elementum magna eros, ac posuere elv
 paragraphs[5].textContent = `123 Way 456 Street \r Somewhere, USA`
 paragraphs[6].textContent = '1 (888) 888-8888'
 paragraphs[7].textContent = 'sales@greatidea.io'
+paragraphs[8].textContent = 'Copyright Great Idea! 2018'
+
+let contact = document.querySelector('.contact')
+contact.style.width = '10rem'
