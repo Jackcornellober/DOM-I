@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navMenu = document.querySelector('nav');
+
+let newA1 = document.createElement('a');
+newA1.textContent = 'Cat Pictures';
+navMenu.appendChild(newA1);
+
+let navItems = document.querySelectorAll('nav > a')
+navItems[0].textContent = siteContent["nav"]['nav-item-1'];
+navItems[1].textContent = siteContent["nav"]['nav-item-2'];
+navItems[2].textContent = siteContent["nav"]['nav-item-3'];
+navItems[3].textContent = siteContent["nav"]['nav-item-4'];
+navItems[4].textContent = siteContent["nav"]['nav-item-5'];
+navItems[5].textContent = siteContent["nav"]['nav-item-6'];
+
+let newA3 = document.createElement('a');
+newA3.textContent = 'Affiliate Program';
+navMenu.prepend(newA3);
+
+let navItemsFull = document.querySelectorAll('nav > a')
+navItemsFull.forEach(x => x.style.color = 'green')
+
+let headerImage = document.querySelector('#cta-img');
+headerImage.src = siteContent["cta"]["img-src"]
+
+let middleImage = document.querySelector('#middle-img')
+middleImage.src = siteContent["main-content"]["middle-img-src"]
+
+let ctaHeader = document.querySelector('.cta-text > h1')
+
+let text1 = document.createTextNode('dom')
+let text2 = document.createTextNode('is')
+let text3 = document.createTextNode('awesome')
+var br1 = document.createElement("br");
+var br2 = document.createElement("br");
+var br3 = document.createElement("br");
+ctaHeader.appendChild(text1)
+ctaHeader.appendChild(br1)
+ctaHeader.appendChild(text2)
+ctaHeader.appendChild(br2)
+ctaHeader.appendChild(text3)
+
+document.querySelector('button').textContent = 'Get Started'
+
+let h4s = document.querySelectorAll('h4')
+h4s[0].textContent = siteContent['main-content']['features-h4'];
+h4s[1].textContent = siteContent['main-content']['about-h4'];
+h4s[2].textContent = siteContent['main-content']['services-h4'];
+h4s[3].textContent = siteContent['main-content']['product-h4'];
+h4s[4].textContent = siteContent['main-content']['vision-h4'];
+h4s[5].textContent = siteContent['main-content']['contact-h4'];
+
+let paragraphs = document.querySelectorAll('p')
+paragraphs[0].textContent = siteContent["main-content"]["features-content"]
+paragraphs[1].textContent = siteContent["main-content"]["about-content"]
+paragraphs[2].textContent = siteContent["main-content"]["services-content"]
+paragraphs[3].textContent = siteContent["main-content"]["product-content"]
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"]
+paragraphs[5].textContent = siteContent["contact"]["address"]
+paragraphs[6].textContent = siteContent["contact"]["phone"]
+paragraphs[7].textContent = siteContent["contact"]["email"]
+paragraphs[8].textContent = siteContent["footer"]["copyright"]
+
+let contact = document.querySelector('.contact')
+contact.style.width = '10rem'
+
+console.log(siteContent.nav.keys)
