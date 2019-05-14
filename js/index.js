@@ -48,12 +48,12 @@ newA1.textContent = 'Cat Pictures';
 navMenu.appendChild(newA1);
 
 let navItems = document.querySelectorAll('nav > a')
-navItems[0].textContent = 'Services';
-navItems[1].textContent = 'Product';
-navItems[2].textContent = 'Vision';
-navItems[3].textContent = 'Features';
-navItems[4].textContent = 'About';
-navItems[5].textContent = 'Contact';
+navItems[0].textContent = siteContent["nav"]['nav-item-1'];
+navItems[1].textContent = siteContent["nav"]['nav-item-2'];
+navItems[2].textContent = siteContent["nav"]['nav-item-3'];
+navItems[3].textContent = siteContent["nav"]['nav-item-4'];
+navItems[4].textContent = siteContent["nav"]['nav-item-5'];
+navItems[5].textContent = siteContent["nav"]['nav-item-6'];
 
 let newA3 = document.createElement('a');
 newA3.textContent = 'Affiliate Program';
@@ -63,10 +63,10 @@ let navItemsFull = document.querySelectorAll('nav > a')
 navItemsFull.forEach(x => x.style.color = 'green')
 
 let headerImage = document.querySelector('#cta-img');
-headerImage.src = "img/header-img.png"
+headerImage.src = siteContent["cta"]["img-src"]
 
 let middleImage = document.querySelector('#middle-img')
-middleImage.src = "img/mid-page-accent.jpg"
+middleImage.src = siteContent["main-content"]["middle-img-src"]
 
 let ctaHeader = document.querySelector('.cta-text > h1')
 
@@ -85,23 +85,25 @@ ctaHeader.appendChild(text3)
 document.querySelector('button').textContent = 'Get Started'
 
 let h4s = document.querySelectorAll('h4')
-h4s[0].textContent = 'Features';
-h4s[1].textContent = 'About';
-h4s[2].textContent = 'Services';
-h4s[3].textContent = 'Product';
-h4s[4].textContent = 'Vision';
-h4s[5].textContent = 'Contact';
+h4s[0].textContent = siteContent['main-content']['features-h4'];
+h4s[1].textContent = siteContent['main-content']['about-h4'];
+h4s[2].textContent = siteContent['main-content']['services-h4'];
+h4s[3].textContent = siteContent['main-content']['product-h4'];
+h4s[4].textContent = siteContent['main-content']['vision-h4'];
+h4s[5].textContent = siteContent['main-content']['contact-h4'];
 
 let paragraphs = document.querySelectorAll('p')
-paragraphs[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[5].textContent = `123 Way 456 Street \r Somewhere, USA`
-paragraphs[6].textContent = '1 (888) 888-8888'
-paragraphs[7].textContent = 'sales@greatidea.io'
-paragraphs[8].textContent = 'Copyright Great Idea! 2018'
+paragraphs[0].textContent = siteContent["main-content"]["features-content"]
+paragraphs[1].textContent = siteContent["main-content"]["about-content"]
+paragraphs[2].textContent = siteContent["main-content"]["services-content"]
+paragraphs[3].textContent = siteContent["main-content"]["product-content"]
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"]
+paragraphs[5].textContent = siteContent["contact"]["address"]
+paragraphs[6].textContent = siteContent["contact"]["phone"]
+paragraphs[7].textContent = siteContent["contact"]["email"]
+paragraphs[8].textContent = siteContent["footer"]["copyright"]
 
 let contact = document.querySelector('.contact')
 contact.style.width = '10rem'
+
+console.log(siteContent.nav.keys)
